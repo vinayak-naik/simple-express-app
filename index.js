@@ -1,5 +1,6 @@
 // Import packages
 const express = require("express");
+const home = require("./routes/home");
 
 // Middlewares
 const app = express();
@@ -13,6 +14,7 @@ app.get('/test', (req, res) => {
   app.get('/', (req, res) => {
     res.send('Route not found!  --vinayak');
   });
+app.use("/home", home);
 
 // connection
 const port = process.env.PORT || 9001;
