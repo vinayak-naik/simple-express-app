@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 app.get('/test', (req, res) => {
   res.send('This is a test route!');
 });
-app.get('/*', (req, res) => {
+app.get('/', (req, res) => {
   res.send('Route not found!  --vinayak');
 });
 
